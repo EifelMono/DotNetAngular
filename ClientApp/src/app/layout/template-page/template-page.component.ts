@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 
 @Component({
-    selector: 'app-blank-pagex',
-    templateUrl: './blank-pagex.component.html',
-    styleUrls: ['./blank-pagex.component.scss'],
+    selector: 'app-template-page',
+    templateUrl: './template-page.component.html',
+    styleUrls: ['./template-page.component.scss'],
     animations: [routerTransition()]
 })
-export class BlankPagexComponent implements OnInit {
+export class TemplatePageComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {}

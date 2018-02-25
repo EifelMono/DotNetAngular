@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlankPagexComponent } from './blank-pagex.component';
+import { TemplatePageComponent } from './template-page.component';
 
-describe('BlankPagexComponent', () => {
-    let component: BlankPagexComponent;
-    let fixture: ComponentFixture<BlankPagexComponent>;
+describe('TemplatePageComponent', () => {
+    let component: TemplatePageComponent;
+    let fixture: ComponentFixture<TemplatePageComponent>;
 
     beforeEach(
         async(() => {
             TestBed.configureTestingModule({
-                declarations: [BlankPagexComponent]
+                declarations: [TemplatePageComponent]
             }).compileComponents();
         })
     );
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(BlankPagexComponent);
+        fixture = TestBed.createComponent(TemplatePageComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
