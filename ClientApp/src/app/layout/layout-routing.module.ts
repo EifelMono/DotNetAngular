@@ -18,7 +18,8 @@ const routes: Routes = [
             { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' },
             { path: 'template-page', loadChildren: './template-page/template-page.module#TemplatePageModule' },
             { path: 'counter-page', loadChildren: './counter-page/counter-page.module#CounterPageModule' },
-            { path: 'fetch-page', loadChildren: './fetch-page/fetch-page.module#FetchPageModule' }
+            { path: 'fetch-page', loadChildren: './fetch-page/fetch-page.module#FetchPageModule' },
+            { path: 'home-page', loadChildren: './home-page/home-page.module#HomePageModule' }
         ]
     }
 ];
