@@ -10,7 +10,7 @@ var target = Argument<string>("target", "Default");
 // Osx: osx-x64
 // Windows: win-x64
 // Linux: ubuntu-x64, rhel-x64, opensuse-x64
-var runtime = Argument<string>("runtime", "osx-x64");
+var runtime = Argument<string>("runtime", "");
 var defaultProjectName= System.IO.Path.GetFileNameWithoutExtension(GetFiles("./*.sln").FirstOrDefault().ToString());
 var projectName= Argument<string>("projectname", defaultProjectName); 
 var sln= $"./{projectName}.sln";
@@ -18,6 +18,24 @@ var dist= "./dist";
 
 Task("BuildIt")
     .Does(() => {
+        if (string.IsNullOrEmpty(runtime))
+        {
+            System.OperatingSystem os = System.Environment.OSVersion;
+            System.PlatformID     pid = os.Platform;
+            switch(pid)
+            {
+                case System.PlatformID.MacOSX:
+                    runtime = "osx-x64";
+                    break;
+                case System.PlatformID.Unix:
+                    runtime = "ubuntu-x64";
+                    break;
+                default:
+                    runtime = "win-x64";
+                    break;
+            }
+        }
+        Information($"Build runtime={runtime}");
         CleanDirectory(dist);
         DotNetCoreRestore(sln);
         DotNetCorePublish(sln, new DotNetCorePublishSettings{
