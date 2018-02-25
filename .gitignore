@@ -232,8 +232,7 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
-# zip
-*.zip
+
 
 # cake.build
 **/tools/**
@@ -242,5 +241,8 @@ tools/**
 !tools/packages.config
 
 # angular
-**/dist 
+**/dist
 **/node_modules
+
+# zip
+*.zip
