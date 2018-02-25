@@ -79,6 +79,7 @@ void NgCreateLayout(string name)
 {
     if (string.IsNullOrEmpty(name)) 
         throw new Exception("ng create layout \"name\" is empty");
+    name = name.ToLower();
     var createPageDir= System.IO.Path.Combine(layoutDir, $"{name}-page");
     if (!System.IO.Directory.Exists(createPageDir))
         System.IO.Directory.CreateDirectory(createPageDir);
@@ -91,7 +92,7 @@ void NgCreateLayout(string name)
     }
 }
 
-Task("DefaultNg")
+Task("ng")
     .Does(()=> {
         switch(create)
         {
@@ -102,6 +103,12 @@ Task("DefaultNg")
                 throw new Exception("ng create=\"{layout}\" not found");
         }
     });
+
+Task("DefaultNg")
+    .IsDependentOn("Ng")
+    .Does(()=> {
+    });
+
 
 #endregion
 

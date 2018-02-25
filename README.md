@@ -36,15 +36,9 @@ copies file from src/app/layout/abc-page/template-page => src/app/layout/abc-pag
 
 ### todo by hand
 
-add to the modules 
+add to the modules
 src/app/layout/layout-routing.modules.ts
 { path: 'abc-page', loadChildren: './abc-page/abc-page.module#AbcPageModule' }
 
 and in the navigation
 src/app/layout/components/sidebar/sidebar.component.html
-
-
-
-
-
-
