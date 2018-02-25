@@ -1,13 +1,13 @@
-import { BlankPagexModule } from './blank-pagex.module';
+import { CounterPageModule } from './counter-page.module';
 
-describe('BlankPagexModule', () => {
-    let blankPageModule: BlankPagexModule;
+describe('CounterPageModule', () => {
+    let counterPageModule: CounterPageModule;
 
     beforeEach(() => {
-        blankPageModule = new BlankPagexModule();
+        counterPageModule = new CounterPageModule();
     });
 
     it('should create an instance', () => {
-        expect(blankPageModule).toBeTruthy();
+        expect(counterPageModule).toBeTruthy();
     });
 });

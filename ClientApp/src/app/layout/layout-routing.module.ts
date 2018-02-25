@@ -17,7 +17,8 @@ const routes: Routes = [
             { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },
             { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' },
             { path: 'blank-pagex', loadChildren: './blank-pagex/blank-pagex.module#BlankPagexModule' },
-            { path: 'counter-page', loadChildren: './counter-page/counter-page.module#CounterPageModule' }
+            { path: 'counter-page', loadChildren: './counter-page/counter-page.module#CounterPageModule' },
+            { path: 'fetch-page', loadChildren: './fetch-page/fetch-page.module#FetchPageModule' }
         ]
     }
 ];
