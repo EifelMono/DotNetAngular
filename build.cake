@@ -23,7 +23,7 @@ Task("BuildIt")
             System.OperatingSystem os = System.Environment.OSVersion;
             System.PlatformID pid = os.Platform;
             Information($"Build pid={pid}");
-            // THIS DOES NOT WORK Coorect
+            // THIS DOES NOT WORK Correct
             // ON UNIX I NEED MacOSX for Test!
             switch(pid)
             {
