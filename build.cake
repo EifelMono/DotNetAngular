@@ -21,15 +21,19 @@ Task("BuildIt")
         if (string.IsNullOrEmpty(runtime))
         {
             System.OperatingSystem os = System.Environment.OSVersion;
-            System.PlatformID     pid = os.Platform;
+            System.PlatformID pid = os.Platform;
+            Information($"Build pid={pid}");
+            // THIS DOES NOT WORK Coorect
+            // ON UNIX I NEED MacOSX for Test!
             switch(pid)
             {
+                case System.PlatformID.Unix:
                 case System.PlatformID.MacOSX:
                     runtime = "osx-x64";
                     break;
-                case System.PlatformID.Unix:
-                    runtime = "ubuntu-x64";
-                    break;
+                //case System.PlatformID.Unix:
+                //    runtime = "ubuntu-x64";
+                //    break;
                 default:
                     runtime = "win-x64";
                     break;
