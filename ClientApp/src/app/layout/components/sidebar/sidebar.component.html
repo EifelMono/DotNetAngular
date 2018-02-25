@@ -53,13 +53,13 @@
         <div class="nested-menu">
             <a class="list-group-item" (click)="addExpandClass('pages')">
                 <span>
-                    <i class="fa fa-plus"></i>&nbsp; {{ 'Backend' | translate }}</span>
+                    <i class="fa fa-plus"></i>&nbsp;<i class="fa fa-server"></i>{{ 'Backend' | translate }}</span>
             </a>
             <li class="nested" [class.expand]="showMenu === 'pages'">
                 <ul class="submenu">
                     <li>
                         <a [routerLink]="['/counter-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-                            <i class="fa fa-file-o"></i>&nbsp;{{ 'Counter' | translate }}
+                            <i class="fa fa-graduation-cap"></i>&nbsp;{{ 'Counter' | translate }}
                         </a>
                     </li>
                 </ul>
