@@ -106,8 +106,8 @@ Task("DefaultNg")
 #endregion
 
 Task("Default")
-    //.IsDependentOn("DefaultBuild")
-    .IsDependentOn("DefaultNg")
+    .IsDependentOn("DefaultBuild")
+    // .IsDependentOn("DefaultNg")
     .Does(() => {
     });
 
