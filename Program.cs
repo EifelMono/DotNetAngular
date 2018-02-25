@@ -17,17 +17,8 @@ namespace angular
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        private static IHostingEnvironment hostingEnvironment = null;
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
                 WebHost.CreateDefaultBuilder(args)
-                       .ConfigureAppConfiguration((hostingContext, config) =>
-                        {
-                            hostingEnvironment = hostingContext.HostingEnvironment;
-                        })
-                        //.UseContentRoot(hostingEnvironment.IsProduction()
-                            //? Path.GetDirectoryName(Environment.GetCommandLineArgs()[0])
-                            //: Directory.GetCurrentDirectory())
-                        .UseStartup<Startup>()
-                        .UseUrls("http://*:60003");
+                        .UseStartup<Startup>();
     }
 }
