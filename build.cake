@@ -91,7 +91,7 @@ var Template= "Template";
 
 string ReplaceTemplate(string text, string name)
 {
-    var Name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name);
+    var Name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name).Replace("-", "");
     return text.Replace("template", name)
                .Replace("Template", Name)
                .Replace($"{name}Url:", "templateUrl:");
