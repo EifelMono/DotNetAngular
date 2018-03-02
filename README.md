@@ -42,3 +42,6 @@ src/app/layout/layout-routing.modules.ts
 
 and in the navigation
 src/app/layout/components/sidebar/sidebar.component.html
+
+### Https with dotnet 2.1
+https://blogs.msdn.microsoft.com/webdev/2018/02/27/asp-net-core-2-1-https-improvements/
