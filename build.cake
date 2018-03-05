@@ -140,5 +140,18 @@ Task("Default")
     .Does(() => {
     });
 
+// Actions
+
+// Build
+// build.sh or build.ps1
+// creates the DotNetCore with angular
+
+// Add Layout
+// build.sh or build.ps1 --target=Ng --create=layout --name=abc
+// Creates a abc-page in ClientApp/src/app/layout 
+// add routing to ClientApp/src/app/layout-routing.module.ts
+// { path: 'abc-page', loadChildren: ''./abc-page/abc-page.module#AbcPageModule'' },
+// and add the layout to the navigation ClientApp/src/app/layout/components/sidebar/sidebar.component.html
+
 
 RunTarget(target);
